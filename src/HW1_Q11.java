@@ -21,6 +21,11 @@ public class HW1_Q11 {
 				System.out.println("Total points possible for exercise " + (i+1) + ":");
 				exercise[i].setTotalPoint(Integer.valueOf(kb.nextLine()));
 				System.out.println("");
+				if(exercise[i].getTotalPoint() < exercise[i].getScoreReceived())
+				{
+					System.out.println("total point must bigger than Score_received!!");
+					i--;
+				}
 			}
 			catch(NumberFormatException e)
 			{
